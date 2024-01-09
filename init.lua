@@ -78,7 +78,6 @@ if vim.fn.argc() == 0 then
     desc = 'Load default session if there is one',
     pattern = '*',
     callback = function()
-      print('This session is ' .. vim.v.this_session)
       if vim.v.this_session == '' then
         if not pcall(vim.cmd, 'silent! source Session.vim') then
           print('Failed to load session from ' .. vim.v.this_session)
